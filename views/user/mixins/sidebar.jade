@@ -1,0 +1,17 @@
+.span3.well
+    .row-fluid
+        .user-image
+            a.thumbnail(href='#')
+                img(src='/img/blank_user_icon.png')
+        h3 #{user.username}
+        p blurb about artist
+        span.badge.badge-warning 8 messages
+        span.badge.badge-info 15 followers
+    hr
+    .sidebar-nav
+        ul.nav.nav-list
+            li.nav-header Dashboard
+            li
+                a(href='/user/'+user.username) Songs
+            li
+                a(href='/user/'+user.username+'/upload') Upload

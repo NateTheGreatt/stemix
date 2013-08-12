@@ -1,0 +1,10 @@
+extends ../layout
+
+block content
+    .row-fluid
+        include mixins/sidebar
+        .span9
+            -each song in songs
+                .row-fluid
+                    include ../inc/mixins/default_player
+                hr

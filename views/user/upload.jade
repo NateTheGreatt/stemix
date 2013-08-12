@@ -1,0 +1,34 @@
+extends ../layout
+
+block content
+    script(type='text/javascript', src='/js/uploader.js')
+    .row-fluid
+        include mixins/sidebar
+        .span9
+            h1 Upload
+            hr
+            form(action='/user/'+user.username+'/upload', method='POST', enctype='multipart/form-data')
+                label Choose a song to upload
+                .fileupload.fileupload-new(data-provides="fileupload")
+                    .input-prepend.input-append
+                        span.add-on
+                            i.icon-music
+                        .uneditable-input
+                            i.icon-file.fileupload-exists
+                            span.fileupload-preview
+                        span.btn.btn-file
+                            span.fileupload-new Select File
+                            span.fileupload-exists Change
+                            input(type='file', name='songFile', id='songFile')
+                        a.btn.fileupload-exists(href="#", data-dismiss='fileupload') Remove
+                input.btn.btn-primary(type='submit', value='Upload')
+
+        hr
+        div.span9
+            div.progress.progress-striped.active
+                div.bar(style='width: 0%')
+        div.span9
+            div.alert.hide
+                button.close(type='button', data-dismiss='alert') x
+                span
+                    strong.message

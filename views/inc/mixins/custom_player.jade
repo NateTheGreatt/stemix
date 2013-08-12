@@ -1,0 +1,15 @@
+script(type='text/javascript', src='/js/audio5player.js')
+.row-fluid
+    .well
+        h3 #{song.title}
+        .row-fluid
+            .btn-group.pull-left
+                .btn.btn-inverse#play-pause
+                    i.icon-white.icon-play
+                .btn.btn-inverse#stop
+                    i.icon-white.icon-stop
+            .progress
+                .bar.audio
+            #time
+    script
+        initAudio('../../uploads/#{song.url}');

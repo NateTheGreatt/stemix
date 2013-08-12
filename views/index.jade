@@ -1,0 +1,45 @@
+extends layout
+
+block content
+    #loginModal
+    .modal-header
+        .modal-body
+            .well
+                ul.nav.nav-tabs
+                    li.active
+                        a(href='#login', data-toggle='tab') Login
+                    li
+                        a(href='#create', data-toggle='tab') Create Account
+                #myTabContent.tab-content
+                    #login.tab-pane.active.in
+                        form.form-horizontal(action='/login', method='POST')
+                            fieldset
+                                .control-group
+                                    label.control-label(for='username') Username
+                                    .controls
+                                        input#username.input-xlarge(type='text', name='username', placeholder='')
+                                .control-group
+                                    label.control-label(for='password') Password
+                                    .controls
+                                        input#password.input-xlarge(type='password', name='password', placeholder='')
+                                .control-group
+                                    .controls
+                                        button.btn.btn-primary Login
+                    #create.tab-pane.fade
+                        form#tab.form-horizontal(action='/signup', method='POST')
+                            fieldset
+                                .control-group
+                                    label.control-label(for='username') Email
+                                    .controls
+                                        input#username.input-xlarge(type='text', name='email')
+                                .control-group
+                                    label.control-label(for='password') Username
+                                    .controls
+                                        input#password.input-xlarge(type='text', name='username')
+                                .control-group
+                                    label.control-label(for='password') Password
+                                    .controls
+                                        input#password.input-xlarge(type='password', name='password')
+                                .control-group
+                                    .controls
+                                        button.btn.btn-primary Sign up

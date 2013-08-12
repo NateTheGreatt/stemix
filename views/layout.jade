@@ -1,0 +1,25 @@
+doctype 5
+html
+    head
+        title=Stemix
+        link(rel='stylesheet', href='/css/bootstrap.css')
+        link(rel='stylesheet', href='/css/bootstrap-responsive.css')
+        link(rel='stylesheet', href='/css/jasny-bootstrap.css')
+        link(rel='stylesheet', href='/css/jasny-bootstrap-responsive.css')
+        link(rel='stylesheet', href='/css/style.css')
+        link(rel='stylesheet', href='/css/ui-lightness/jquery-ui-1.10.3.custom.css')
+        script(type='text/javascript', src='//ajax.googleapis.com/ajax/libs/angularjs/1.0.7/angular.min.js')
+        script(type='text/javascript', src='//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js')
+        script(type='text/javascript', src='/js/jquery-ui-1.10.3.custom.js')
+        script(type='text/javascript', src='/js/bootstrap.js')
+        script(type='text/javascript', src='/js/jasny-bootstrap.js')
+        script(type='text/javascript', src='/js/audio5.js')
+
+    body
+        block header
+            include inc/header
+        .container.content
+              block content
+              .span12
+                  block footer
+                    include inc/footer
